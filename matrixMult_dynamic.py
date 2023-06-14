@@ -1,5 +1,5 @@
 import random
-import resourcelimit
+#import resourcelimit
 
 def matrix_multiplication(a, b):
     if len(a[0]) != len(b):
@@ -14,7 +14,7 @@ def matrix_multiplication(a, b):
 
     return result
 
-resourcelimit.set_max_runtime(15)
+#resourcelimit.set_max_runtime(15)
 
 # Get matrix size from user input
 rows_a = int(input("Enter the number of rows for matrix A: "))
