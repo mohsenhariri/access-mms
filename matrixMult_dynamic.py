@@ -1,5 +1,4 @@
 import random
-#import resourcelimit
 
 def matrix_multiplication(a, b):
     if len(a[0]) != len(b):
@@ -14,20 +13,17 @@ def matrix_multiplication(a, b):
 
     return result
 
-#resourcelimit.set_max_runtime(15)
+# Define the matrix dimensions
+rows_a = 3
+cols_a = 2
+rows_b = 2
+cols_b = 4
 
-# Get matrix size from user input
-rows_a = int(input("Enter the number of rows for matrix A: "))
-cols_a = int(input("Enter the number of columns for matrix A: "))
-rows_b = cols_a  # Number of rows in matrix B must match the number of columns in matrix A
-cols_b = int(input("Enter the number of columns for matrix B: "))
-
-# Generate random matrices based on the input size
+# Generate random matrices based on the predefined sizes
 a = [[random.randint(0, 9) for _ in range(cols_a)] for _ in range(rows_a)]
 b = [[random.randint(0, 9) for _ in range(cols_b)] for _ in range(rows_b)]
 
 result = matrix_multiplication(a, b)
-#print(result)
 
 # Print matrices A, B, and the result
 print("Matrix A:")
